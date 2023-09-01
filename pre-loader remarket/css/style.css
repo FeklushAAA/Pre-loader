@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: beige;
+}
+
+.img-wid{
+    position: absolute;
+}
+
+.r1, .e{
+    z-index: 5;
+    opacity: 0;
+}
+.r1{
+    width: 25px;
+    top:40px;
+    left: 48px;  
+}
+.e{
+    width: 25px;
+    top:51px;
+    left: 75px;
+}
+
+.m, .a, .r, .k, .e2, .t{
+    opacity: 0;
+    z-index: 5;
+}
+.m{
+    width: 36px;
+    top: 52px;
+    left: 117px;
+}
+
+.a{
+    width: 22px;
+    top: 52px;
+    left: 160px;
+}
+
+.r{
+    width: 15px;
+    top: 52px;
+    left: 192px;
+}
+
+.k{
+    width: 23px;
+    top: 36px;
+    left: 212px;
+}
+
+.e2{
+    width: 25px;
+    top: 52px;
+    left: 235px;
+}
+
+.t{
+    width: 15px;
+    top: 46px;
+    left: 263px;
+}
+.word_anim{
+    animation: word_anim 0.5s linear forwards;
+}    
+@keyframes word_anim {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+
+
+/* Круг, скрывающий стрелочки */
+.one{
+    top: 10px;
+    left: 20px;
+    position: relative;
+    border-radius: 50%;
+    width: 99px;
+    height: 99px;
+    background-color: transparent;
+    transform-origin: right bottom;
+    z-index: 3;
+}
+.outer {
+    top: -25px;
+    left: -25px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #e3e3e3;
+    transform: rotate(-100deg) scale(1, -1);
+    z-index: 3;
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0, 50% 0, 50% 50%, 50% 50%);
+}
+.xxx{
+    animation: xxx 1s linear forwards;
+}
+  
+  @keyframes xxx {
+    12.5% {
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0, 0 0, 50% 50%, 50% 50%);
+      }
+      25% {
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 50%, 0 50%, 50% 50%, 50% 50%);
+      }
+      37.5% {
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 100%, 0 100%, 50% 50%, 50% 50%);
+      }
+      50% {
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 50%, 50% 50%);
+      }
+      62.5% {
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%);
+      }
+      75% {
+        clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 50% 50%, 50% 50%);
+      }
+      87.5% {
+        clip-path: polygon(50% 0%, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 50% 50%, 50% 50%);
+      }
+      100% {
+        clip-path: polygon(50% 0%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 50%, 50% 50%);
+    }
+  }
+
+
+/* Страничка загрузки */
+.box{
+    position: absolute;
+    background-color: #e3e3e3;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow-y: hidden;
+}
+
+/* Блок с логотипом */
+.block {
+    position: relative;
+    overflow: hidden;
+    margin: 300px auto;
+    position: relative;
+    width: 400px;
+    height: 130px;
+}
+
+/* Стрелочки */
+#a1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100px;
+    z-index: 2;
+}
+
+
+
+/* Всплывание вверх */
+.show{
+    animation: show 0.5s forwards;
+    opacity: 0;
+}
+@keyframes show {
+    0% {transform: scale(0.9); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
+/* Исчезновение */
+.invise{
+    animation: inv 2s forwards;
+    opacity: 1;
+}
+@keyframes inv{
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+}
+
+/* Уплывание вверх */
+.opa{
+    animation: back 1s forwards;
+    transform: translateY(0);
+    opacity: 1;
+}
+@keyframes back{
+    0% {transform: translateY(0); opacity: 1;}
+    50% { opacity: 0;}
+    100% {transform: translateY(-80%); opacity: 0;}
+}
+
+.spin{
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.slide{
+    transform: translateX(-100%);
+    animation: slide 1s forwards;
+}
+@keyframes slide{
+    0% { transform: translateX(-200%);}
+    100% { transform: translateX(0);}
+}
+
+
